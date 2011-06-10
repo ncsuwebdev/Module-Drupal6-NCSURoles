@@ -1,0 +1,17 @@
+NC State University NCSU Roles Module to work with Drupal 6.
+
+
+******************************************
+             INSTALLATION
+******************************************
+
+1. Click on DOWNLOADS
+2. Download the "ncsuroles.zip" file from the "Download Packages" section
+3. Extract the contents into your Drupal installation at the following path:
+        yoursite-root-folder/sites/all/modules/contrib/ncsuroles
+4. If extracted correctly, the wraplogin.info file should be located at:
+        yoursite-root-folder/sites/all/modules/contrib/ncsuroles/ncsuroles.info
+5. Enable the module via the Drupal control panel and configure as described in README.TXT.
+
+Additional information available in README.TXT
+
