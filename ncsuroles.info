@@ -1,0 +1,10 @@
+;$Id$
+name = "NCSU Roles"
+description = "Automatically imports user roles from various NCSU sources."
+package = External authentication
+dependencies[] = wraplogin
+
+version="6.x-1.1"
+core=6.x
+project="ncsuroles"
+php=5.2
