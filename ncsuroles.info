@@ -4,7 +4,7 @@ description = "Automatically imports user roles from various NCSU sources."
 package = External authentication
 dependencies[] = wraplogin
 
-version="6.x-1.1"
+version="6.x-1.2"
 core=6.x
 project="ncsuroles"
 php=5.2

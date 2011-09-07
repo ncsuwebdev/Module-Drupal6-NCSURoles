@@ -165,7 +165,7 @@ function sync_ncsuroles($uid = 0) {
   $client = ncsuroles_soap_client();
 
   // some rules for each source type
-  $byuser = array( "hesiod" => 1 );
+  $byuser = array( "hesiod" => 1, "ldap" => 1 );
   $bygroup = array( "afspts" => 1, "systools" => 1 );
 
   // build a sparse 2-D array of role settings
@@ -329,6 +329,7 @@ function ncsuroles_form_alter(&$form, $edit, $form_id) {
       '#options'        => array(
           'afspts'    => 'AFS PTS Group',
           'hesiod'    => 'Hesiod Group',
+          'ldap'      => 'LDAP Group',
           'systools'  => 'SysNews Group',
       ),
       '#description'    => 'Select which type of group you want to import for this role.',
@@ -343,6 +344,7 @@ function ncsuroles_form_alter(&$form, $edit, $form_id) {
       '#description'    => 'Enter the group identifier for the source group.<br/>'
       .'<strong>AFS PTS:</strong> use owner:group@cell, e.g. www:webxteam@unity<br/>'
       .'<strong>Hesiod:</strong> use the group id, e.g. ncsu_staff<br/>'
+      .'<strong>LDAP:</strong> use the group id, e.g. primary_role_E<br/>'
       .'<strong>SysNews:</strong> use the systools group id, e.g. oit-iso<br/>',
       '#weight'         => 0,
     );

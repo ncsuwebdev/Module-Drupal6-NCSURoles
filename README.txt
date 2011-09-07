@@ -1,6 +1,6 @@
 //$Id$
 
-NCSU Roles module v6.x-1.1
+NCSU Roles module v6.x-1.2
 ==========================
 By brabec at ncsu.edu
 
@@ -64,6 +64,28 @@ Hesiod Groups
     - for example, "hes brabec grplist" returns:
         ncsu_staff:324:ncsu:108:cccadm:110:cc-staff:320
       so we could use "ncsu_staff", "ncsu", "cccadm", or "cc-staff"
+
+LDAP Groups
+    - these are fake groups that are populated using student and employee 
+      information from ldap.ncsu.edu datasets
+    - the following groups are provided (case sensitive):
+        - primary_role_E or primary_role_S = employee or student
+        - emp_status_X = where X is their emp_status code as seen in ldap
+        - employee     = given if X is one of the "active" codes [ALPQR]
+        - ouc_123456   = when the user is an employee in OUC=123456
+        - ouc4_1234    = when the user is an employee of the OUC prefix 1234
+        - ouc2_12      = when the user is an employee of the OUC prefix 12
+        - class_code_XX  = where XX is their class_code (e.g. FR, SO, GR...)
+        - student        = given if they have XX defined at all
+        - curr_code_XXX  = where XXX is the curriculum code of their major
+    - for example, this user is an employee of OIT-ISO, and is a 
+      member of these groups:
+          'primary_role_E',
+          'ouc_512001',
+          'ouc4_5120',
+          'ouc2_51',
+          'employee',
+          'emp_status_A'
 
 SysNews Groups
     - this type can include any of the SysNews SysTools permissions groups
