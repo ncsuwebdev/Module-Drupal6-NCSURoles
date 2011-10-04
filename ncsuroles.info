@@ -8,3 +8,6 @@ version="6.x-1.2"
 core=6.x
 project="ncsuroles"
 php=5.2
+
+; for updates to the theme, specify features server location
+project status url = http://drupal.ncsu.edu/features/fserver
